@@ -2,7 +2,7 @@
 session_start();
 
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="/phpproject"> Learning Hub</a>
+<br><br><strong><a class="navbar-brand" href="/phpproject"> Home</a></strong>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -19,11 +19,11 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">';
 
       $sql = "SELECT category_name, category_id FROM `categories` LIMIT 3";
-      $result = mysqli_query($conn, $sql); 
+      $result = mysqli_query($conn, $sql);
       while($row = mysqli_fetch_assoc($result)){
-        echo '<a class="dropdown-item" href="threadlist.php?catid='. $row['category_id']. '">' . $row['category_name']. '</a>'; 
+        echo '<a class="dropdown-item" href="threadlist.php?catid='. $row['category_id']. '">' . $row['category_name']. '</a>';
       }
-        
+
       echo '</div>
     </li>
   </ul>
@@ -34,7 +34,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
       <a href="partials/_logout.php" class="btn btn-outline-success ml-2">Logout</a>
       </form>';
 }
-else{ 
+else{
   echo '<form class="form-inline my-2 my-lg-0">
     </form>
     <button class="btn btn-outline-success ml-2" data-toggle="modal" data-target="#loginModal">Login</button>
@@ -44,7 +44,7 @@ else{
 
   echo '</div>
       </div>
-      </nav>'; 
+      </nav>';
 
 include 'partials/_loginModal.php';
 include 'partials/_signupModal.php';

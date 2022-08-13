@@ -53,11 +53,11 @@
 
     <!-- Category container starts here -->
     <div class="container my-4" id="ques">
-        <h2 class="text-center my-4">Learning Hub - Browse Categories</h2>
+        <h2 class="text-center my-4">BROWSE SUBJECTS FOR DISCUSS</h2>
         <div class="row my-4">
           <!-- Fetch all the categories and use a loop to iterate through categories -->
-         <?php 
-         $sql = "SELECT * FROM `categories`"; 
+         <?php
+         $sql = "SELECT * FROM `categories`";
          $result = mysqli_query($conn, $sql);
          while($row = mysqli_fetch_assoc($result)){
           // echo $row['category_id'];
@@ -75,10 +75,10 @@
                       </div>
                   </div>
                 </div>';
-         } 
+         }
          ?>
-            
- 
+
+
         </div>
     </div>
 
